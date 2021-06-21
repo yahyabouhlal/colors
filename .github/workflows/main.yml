@@ -14,9 +14,9 @@ jobs:
     - name: Build and deploy the Docker image
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        APP_NAME: ${{ 'color-api-ci' }}
+        APP_NAME: ${{ 'unittest-mock' }}
       run: |
         cd ./
-        docker login --username=zakaria.elhaouarii99@gmail.com --password=$HEROKU_API_KEY registry.heroku.com
+        docker login --username=yahya.bouhlal.b@gmail.com --password=$HEROKU_API_KEY registry.heroku.com
         heroku container:push web -a $APP_NAME
         heroku container:release web -a $APP_NAME
